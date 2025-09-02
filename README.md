@@ -7,7 +7,7 @@ oc new-project ai-file-validator
 
 **Deploy the applicaition**
 ~~~
-oc new-app registry.redhat.io/ubi9/openjdk-21:latest~https://github.com/alexbarbosa1989/file-validator.git --name=ai-file-validator
+oc new-app registry.redhat.io/ubi8/openjdk-21:latest~https://github.com/alexbarbosa1989/file-validator.git --name=ai-file-validator
 ~~~
 
 **Create secret with OpenAI API KEY**
