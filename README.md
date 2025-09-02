@@ -22,5 +22,5 @@ oc set env deployment/ai-file-validator --from=secret/openai-secret
 
 **Expose the service**
 ~~~
-oc expose svc/quarkus-ai-validator
+oc expose svc/ai-file-validator
 ~~~
