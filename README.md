@@ -2,7 +2,7 @@
 
 **Create a new project**
 ~~~
-oc new-app ai-file-validator
+oc new-project ai-file-validator
 ~~~
 
 **Deploy the applicaition**
