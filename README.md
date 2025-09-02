@@ -24,3 +24,21 @@ oc set env deployment/ai-file-validator --from=secret/openai-secret
 ~~~
 oc expose svc/ai-file-validator
 ~~~
+
+## Test the service
+**Clone the project**
+~~~
+git clone https://github.com/alexbarbosa1989/file-validator.git
+~~~
+
+**move to the project directory**
+~~~
+cd file-validator
+~~~
+
+**Use the demo YAML file located in the /demo directory to test the service**
+~~~
+curl -X POST \
+  -H "Content-Type: text/plain" \
+  --data-binary @demo/test-file.yaml $OCP_ROUTE/validate
+~~~
