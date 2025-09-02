@@ -1,18 +1,19 @@
 package org.redhat.test;
 
+import io.quarkus.test.junit.QuarkusTest;
 import io.quarkus.test.InjectMock;
 import org.junit.jupiter.api.Test;
 import dev.langchain4j.model.openai.OpenAiChatModel;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.equalTo;
 import static org.mockito.Mockito.when;
 
-
+@QuarkusTest
 class ResourceValidatorTest {
 
     @InjectMock
-    OpenAiChatModel mockModel;  // replaces the real bean
+    OpenAiChatModel mockModel;
 
     @Test
     void testValidateYaml() {
@@ -21,10 +22,11 @@ class ResourceValidatorTest {
                 .thenReturn(fakeResponse);
 
         given()
-            .body("apiVersion: v1\nkind: Pod") // sample YAML
+            .contentType("text/plain") 
+            .body("apiVersion: v1\nkind: Pod")
             .when().post("/validate")
             .then()
             .statusCode(200)
-            .body("validation", is(fakeResponse));
+            .body(equalTo("{validation=YAML is valid. No issues found.}"));
     }
 }

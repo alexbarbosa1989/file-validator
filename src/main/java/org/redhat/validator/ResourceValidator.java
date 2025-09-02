@@ -17,6 +17,7 @@ public class ResourceValidator {
     @POST
     public Response validateYaml(String yaml) {
         String response = model.chat("Validate this OpenShift YAML for correctness. If correct, sumarize the YAML in a markdown table. Limits your answer to only suggest specific changes to fix it. If the YALM structure is correct don't suggest any change:\n" + yaml);
-        return Response.ok(Map.of("validation", response)).build();
+        Map<String, String> result = Map.of("validation", response);
+        return Response.ok(result).build();
     }
 }
