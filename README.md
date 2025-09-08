@@ -1,13 +1,12 @@
 # file-validator
 
---
+
 ## Deployment alternatives
 
 ## [Local Deployment](https://github.com/alexbarbosa1989/file-validator?tab=readme-ov-file#local-deployment)
 
 ## [Openshift Deployment](https://github.com/alexbarbosa1989/file-validator?tab=readme-ov-file#openshift-deployment)
 
---
 
 ## Local Deployment
 **Clone the project**
