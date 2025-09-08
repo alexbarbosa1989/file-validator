@@ -3,9 +3,9 @@
 --
 ## Deployment alternatives
 
-[Local Deployment](https://github.com/alexbarbosa1989/file-validator?tab=readme-ov-file#local-deployment)
+## [Local Deployment](https://github.com/alexbarbosa1989/file-validator?tab=readme-ov-file#local-deployment)
 
-[Openshift Deployment](https://github.com/alexbarbosa1989/file-validator?tab=readme-ov-file#openshift-deployment)
+## [Openshift Deployment](https://github.com/alexbarbosa1989/file-validator?tab=readme-ov-file#openshift-deployment)
 
 --
 
